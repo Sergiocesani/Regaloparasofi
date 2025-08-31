@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Carta de Amor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="carta-body">
+  <!-- Fondo dinámico del carrusel -->
+  <div class="page-bg" id="pageBg" aria-hidden="true"></div>
+
+  <header>
+    <h1 id="saludo">Hola 💌</h1>
+  </header>
+
+  <main>
+    <!-- 🔊 Audio local: suena al abrir el sobre -->
+    <audio id="musicaFondo" src="music/05-precious.mp3" preload="auto" playsinline></audio>
+
+    <!-- SOBRE + CARTA -->
+    <section class="sobre-wrap" aria-label="Carta de amor">
+      <div class="sobre" id="sobre">
+        <div class="cuerpo" aria-hidden="true"></div>
+        <div class="solapa" aria-hidden="true"></div>
+
+        <!-- Botón grande invisible (abre/cierra) -->
+        <button class="sobre-toggle" id="abrirCartaBtn"
+                aria-expanded="false" aria-controls="carta-papel">
+          💌 Abrir carta
+        </button>
+
+        <!-- Botón visible para cerrar cuando está abierta -->
+        <button class="cerrar-carta" id="cerrarCartaBtn" aria-label="Cerrar carta">✕</button>
+
+        <div class="ranura">
+          <div class="carta-papel" id="carta-papel" role="region" aria-label="Contenido de la carta">
+            <div class="papel-interior">
+              <p>
+                El día que te conocí, no sabía que mi vida estaba a punto de cambiar para siempre.<br><br>
+                Tu sonrisa iluminó mis días más grises, y tus palabras me dieron calma cuando más la necesitaba.<br><br>
+                Desde ese momento, todo tuvo sentido. Cada instante con vos es un recuerdo que guardo con amor en mi corazón.<br><br>
+                Desde cada beso, cada abrazo, cada momento compartido mirando demon slayer o naruto, mirando peliculas de terror <br><br>
+                Que solo a vos te gustan tanto, pero compartirlos con vos, con papitas y dulces es un de mis momentos preferidos.
+                Gracias por existir, por elegirme, por compartir esta historia que apenas comienza.<br><br>
+                Te amo más de lo que las palabras pueden decir. 💖💘
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL (usa las imágenes de Línea del Amor) -->
+    <section class="carrusel" aria-label="Carrusel de recuerdos">
+      <div class="carrusel-inner">
+        <button class="ctrl prev" id="btnPrev" aria-label="Anterior" title="Anterior">‹</button>
+
+        <figure class="slide" id="slide" tabindex="0" aria-live="polite" aria-atomic="true">
+          <img id="slideImg" src="" alt="Recuerdo" />
+          <figcaption id="slideCap">Recuerdo</figcaption>
+        </figure>
+
+        <button class="ctrl next" id="btnNext" aria-label="Siguiente" title="Siguiente">›</button>
+      </div>
+
+      <div class="carrusel-hint">
+        Tip: hacé click en la foto para <strong>expandir/volver</strong> el fondo.
+      </div>
+    </section>
+
+    <!-- LÍNEA DE TIEMPO (fuente de imágenes del carrusel; queda oculta por CSS) -->
+    <section class="linea-tiempo" id="lineaAmor">
+      <h2>🗓️ Línea del Amor</h2>
+      <ul>
+        <li><span class="fecha"></span> Feliz Cumpleaños mi amor</li>
+        <img src="images/IMG_20250818_120823_088.jpg" alt="Feliz Cumpleaños mi amor">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120823_088.jpg" alt="Xexito te ama mucho">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120835_213.jpg" alt="Y te deja una carta oculta">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120847_834.jpg" alt="Para el día de tu cumpleaños">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120855_997.jpg" alt="Te preparo globos">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120905_485.jpg" alt="Se que te gustan los regalos">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120924_953.jpg" alt="Así que improvisé">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120938_339.jpg" alt="Me haces muy feliz">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_120944_869.jpg" alt="Escuchar tus risas me vuelven loco de amor">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121004_225.jpg" alt="Cada vez que estamos lejos">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121012_830.jpg" alt="No veo la hora de poder verte">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121052_668.jpg" alt="Ojalá pudiera darte todo lo que te mereces">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121117_680.jpg" alt="Así como me das todo tu inmenso amor">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121129_353.jpg" alt="Amo cada momento compartido">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121142_246.jpg" alt="Así como cada foto juntos">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121151_730.jpg" alt="Cada locura realizada es un momento hermoso mi lady tsunade">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121157_444.jpg" alt="Deseo que en este nuevo año , seas más feliz">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121204_735.jpg" alt="Que explotes ese potencial increible que tenes">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121210_631.jpg" alt="Que salgas a comerte el mundo">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121215_461.jpg" alt="Porque si de algo estoy seguro">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121221_001.jpg" alt="Es que mi novia lo puede conseguir todo">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121238_393.jpg" alt="Te amo mucho">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121403_007.jpg" alt="Jutsu de invocación, Chechito el increible">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121507_899.jpg" alt="El que te canta el perro xaltita el que come xaltita dentro del maaar">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121532_271.jpg" alt="Si ese mismo xexito te ama con su vida">
+        <li><span class="fecha"></span></li>
+        <img src="images/IMG_20250818_121838_823.jpg" alt="Y espera que esta sorpresa te haya gustado, vas a tenerlo por siempre">
+        <li><span class="fecha"></span></li>
+        <img src="images/Screenshot_20250818_122001_Instagram.jpg" alt="24 ; 31/08/2025">
+      </ul>
+    </section>
+
+    <!-- PERSONITA -->
+    <!-- PERSONITA / GAARA -->
+<aside class="guia-persona" id="guia" aria-live="polite" aria-hidden="true">
+  <div class="persona">
+    <img src="images/gaara.gif" alt="Gaara señalando" class="gaara-gif">
+  </div>
+  <div class="globo">
+    <p>¡Mirá estas fotos! Gaara te acompaña mientras recordamos 💞</p>
+  </div>
+</aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
